@@ -12,14 +12,14 @@
     <div class="page-container">
 <header>
     <div class="logo">
-    <a href="index.html"> IT ir spēks! </a>
+    <a href="index.php"> IT ir spēks! </a>
     </div>
 
 <nav class="navbar">
-    <a href="index.html" onload="enableOverflow()">Sākums</a>
-    <a href="aktualitates.html">Aktualitātes</a>
-    <a href="vakances.html">Vakances</a>
-    <a href="kontakti.html">Kontakti</a>
+    <a href="index.php" onload="enableOverflow()">Sākums</a>
+    <a href="aktualitates.php">Aktualitātes</a>
+    <a href="vakances.php">Vakances</a>
+    <a href="kontakti.php">Kontakti</a>
     <a id="login-btn" onclick="openForm()"><i class="fas fa-sign-in"></i></a>
     
     <div class="login-popup">
@@ -45,14 +45,14 @@
     <div class="box">
 <h2>Jaunākā aktualitāte</h2>
 <hr>
-<a href="aktualitate.html"><h3 id="head3">Kas jauns MySQL</h3></a>
+<a href="aktualitate.php"><h3 id="head3">Kas jauns MySQL</h3></a>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus nam distinctio autem molestiae fugiat ratione consequatur facere laborum rerum quo obcaecati eveniet maxime architecto voluptate iusto odit amet, dignissimos exercitationem quam error nesciunt dolorem expedita non! Voluptas iure suscipit rem earum eveniet consequatur doloremque minus repellendus laboriosam, quia ratione quos!</p>
     </div>
 
     <div class="box">
         <h2>Jaunākā vakance</h2>
         <hr>
-        <a href="vakance.html"><h3 id="head3">Darbs Liepājas Valsts tehnikumā</h3></a>
+        <a href="vakance.php"><h3 id="head3">Darbs Liepājas Valsts tehnikumā</h3></a>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In quod voluptates suscipit laudantium harum maxime accusantium consectetur molestias maiores sint, quibusdam ex aliquid voluptatibus facilis eaque cumque nam nulla ut, illum excepturi ratione porro expedita. Nihil, eius exercitationem non suscipit labore illum aut hic excepturi veniam, nam tempore esse minus.</p>
             </div>
 </div>

@@ -13,14 +13,14 @@
 <header>
     <div class="logo">
 
-    <a href="index.html">IT ir spēks! </a>
+    <a href="index.php">IT ir spēks! </a>
    
     </div>
 <nav class="navbar">
-    <a href="index.html">Sākums</a>
-    <a href="aktualitates.html">Aktualitātes</a>
-    <a href="vakances.html">Vakances</a>
-    <a href="kontakti.html">Kontakti</a>
+    <a href="index.php">Sākums</a>
+    <a href="aktualitates.php">Aktualitātes</a>
+    <a href="vakances.php">Vakances</a>
+    <a href="kontakti.php">Kontakti</a>
     <a id="login-btn" onclick="openForm()"><i class="fas fa-sign-in"></i></a>
     <div class="login-popup">
         <div class="close" onclick="closeForm()">×</div>
@@ -39,38 +39,38 @@
         <h2>Mūsdienu IT aktualitātes</h2>
         <hr>
         <div class="aktualitates">
-                    <div class="akt"><a href="aktualitate.html">
+                    <div class="akt"><a href="aktualitate.php">
                         <h3>IT nozarē atklāts jauns atvieglojums!</h3>
                         <hr>
                     <p>Jauns atvieglojums atrasts IT nozarē, kas palīdzēs visiem un jebkuram.</p>
                     </a></div>
 
-                    <div class="akt"><a href="aktualitate.html">
+                    <div class="akt"><a href="aktualitate.php">
                         <h3>IT nozarē atklāts jauns atvieglojums!</h3>
                         <hr>
                     <p>Jauns atvieglojums atrasts IT nozarē, kas palīdzēs visiem un jebkuram.</p>
                     </a></div>
 
                     
-                    <div class="akt"><a href="aktualitate.html">
+                    <div class="akt"><a href="aktualitate.php">
                         <h3>IT nozarē atklāts jauns atvieglojums!</h3>
                         <hr>
                     <p>Jauns atvieglojums atrasts IT nozarē, kas palīdzēs visiem un jebkuram.</p>
                     </a></div>
 
-                    <div class="akt"><a href="aktualitate.html">
+                    <div class="akt"><a href="aktualitate.php">
                         <h3>IT nozarē atklāts jauns atvieglojums!</h3>
                         <hr>
                     <p>Jauns atvieglojums atrasts IT nozarē, kas palīdzēs visiem un jebkuram.</p>
                     </a></div>
 
-                    <div class="akt"><a href="aktualitate.html">
+                    <div class="akt"><a href="aktualitate.php">
                         <h3>IT nozarē atklāts jauns atvieglojums!</h3>
                         <hr>
                     <p>Jauns atvieglojums atrasts IT nozarē, kas palīdzēs visiem un jebkuram.</p>
                     </a></div>
 
-                    <div class="akt"><a href="aktualitate.html">
+                    <div class="akt"><a href="aktualitate.php">
                         <h3>IT nozarē atklāts jauns atvieglojums!</h3>
                         <hr>
                     <p>Jauns atvieglojums atrasts IT nozarē, kas palīdzēs visiem un jebkuram.</p>
