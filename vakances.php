@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aktualitātes</title>
+    <title>Vakances</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
@@ -35,47 +35,29 @@
 <div id="menu-btn" class="fas fa-bars"></div>
 </header>
 <div class="box-container">
-    <div class="box">
+<div class='box'>
         <h2>Piedāvātās vakances</h2>
         <hr>
-        <div class="vakances">
-                <div class="vak"><a href="vakance.php">
-                    <h3>IT nozarē atklāts jauns atvieglojums!</h3>
+    <?php
+require("connect_db.php");
+$vakancesQuery = "SELECT * FROM vakances";
+$atlasaVakances = mysqli_query($savienojums, $vakancesQuery);
+
+if(mysqli_num_rows($atlasaVakances)> 0 ){ #parbauda vai ir specialitates datubazeeeeeeeeeeeeee
+    while($ieraksts = mysqli_fetch_assoc($atlasaVakances)){
+        echo "
+        <div class='vakances'>
+                <div class='vak'><a href='vakance.php'>
+                    <h3>'{$ieraksts['virsraksts']}'</h3>
                     <hr>
-                <p>Jauns atvieglojums atrasts IT nozarē, kas palīdzēs visiem un jebkuram.</p>
+                <p>'{$ieraksts['apraksts']}'</p>
                 </a></div>
-
-                <div class="vak"><a href="vakance.php">
-                    <h3>IT nozarē atklāts jauns atvieglojums!</h3>
-                    <hr>
-                <p>Jauns atvieglojums atrasts IT nozarē, kas palīdzēs visiem un jebkuram.</p>
-                </a></div>
-
-                    <div class="vak"><a href="vakance.php">
-                        <h3>IT nozarē atklāts jauns atvieglojums!</h3>
-                        <hr>
-                    <p>Jauns atvieglojums atrasts IT nozarē, kas palīdzēs visiem un jebkuram.</p>
-                    </a></div>
-
-                    <div class="vak"><a href="vakance.php">
-                        <h3>IT nozarē atklāts jauns atvieglojums!</h3>
-                        <hr>
-                    <p>Jauns atvieglojums atrasts IT nozarē, kas palīdzēs visiem un jebkuram.</p>
-                    </a></div>
-
-                    <div class="vak"><a href="vakance.php">
-                        <h3>IT nozarē atklāts jauns atvieglojums!</h3>
-                        <hr>
-                    <p>Jauns atvieglojums atrasts IT nozarē, kas palīdzēs visiem un jebkuram.</p>
-                    </a></div>
-
-                    <div class="vak"><a href="vakance.php">
-                        <h3>IT nozarē atklāts jauns atvieglojums!</h3>
-                        <hr>
-                    <p>Jauns atvieglojums atrasts IT nozarē, kas palīdzēs visiem un jebkuram.</p>
-                    </a></div>
-            
-        </div>
+        </div>";
+}
+}else{
+    echo "Nav nevienas specialitātes";
+}
+    ?>
     </div>
 </div>
 

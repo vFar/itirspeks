@@ -47,12 +47,12 @@
     <?php
     require("connect_db.php");
     
-    $aktualitateQuery = "SELECT * from aktualitates order by aktualitate_id desc limit 1";
-    $atlasaAktualitates = mysqli_query($savienojums, $aktualitateQuery);
+    $HomeaktualitateQuery = "SELECT * from aktualitates order by aktualitate_id desc limit 1";
+    $HomeatlasaAktualitates = mysqli_query($savienojums, $HomeaktualitateQuery);
     $akt_virsraksts="";
     $akt_apraksts="";
-    if(mysqli_num_rows($atlasaAktualitates)==1 ){
-    while($ieraksts = mysqli_fetch_assoc($atlasaAktualitates)){
+    if(mysqli_num_rows($HomeatlasaAktualitates)==1 ){
+    while($ieraksts = mysqli_fetch_assoc($HomeatlasaAktualitates)){
         $akt_virsraksts = $ieraksts['virsraksts'];
         $akt_apraksts = $ieraksts['apraksts'];
         }
@@ -69,12 +69,12 @@
 
 
 
-    $vakanceQuery = "SELECT * from vakances order by vakance_id desc limit 1";
-    $atlasaVakances = mysqli_query($savienojums, $vakanceQuery);
+    $HomevakanceQuery = "SELECT * from vakances order by vakance_id desc limit 1";
+    $HomeatlasaVakances = mysqli_query($savienojums, $HomevakanceQuery);
     $vak_virsraksts="";
     $vak_apraksts="";
-    if(mysqli_num_rows($atlasaVakances)==1 ){
-    while($ieraksts = mysqli_fetch_assoc($atlasaVakances)){
+    if(mysqli_num_rows($HomeatlasaVakances)==1 ){
+    while($ieraksts = mysqli_fetch_assoc($HomeatlasaVakances)){
         $vak_virsraksts = $ieraksts['virsraksts'];
         $vak_apraksts = $ieraksts['apraksts'];
         }
