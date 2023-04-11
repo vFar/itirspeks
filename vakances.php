@@ -47,12 +47,17 @@ if(mysqli_num_rows($atlasaVakances)> 0 ){ #parbauda vai ir specialitates datubaz
     while($ieraksts = mysqli_fetch_assoc($atlasaVakances)){
         echo "
         <div class='vakances'>
-                <div class='vak'><a href='vakance.php'>
+        <form action='vakance.php' method='post'>
+                <button type='submit' name='vakance' class='btn' value='{$ieraksts['vakance_id']}'>
+                <div class='vak'>
+                <a>
                     <h3>'{$ieraksts['virsraksts']}'</h3>
                     <hr>
                 <p>'{$ieraksts['apraksts']}'</p>
-                </a></div>
+                </a></form>
+                </div>
         </div>";
+
 }
 }else{
     echo "Nav nevienas specialitātes";

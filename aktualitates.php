@@ -60,7 +60,7 @@ if(mysqli_num_rows($atlasaAktualitates)> 0 ){ #parbauda vai ir specialitates dat
 
 }
 }else{
-    echo "Nav nevienas specialitātes";
+    echo "Kļūda";
 }
     ?>
     </div>
