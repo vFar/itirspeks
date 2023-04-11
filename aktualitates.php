@@ -46,11 +46,16 @@ $atlasaAktualitates = mysqli_query($savienojums, $aktualitatesQuery);
 if(mysqli_num_rows($atlasaAktualitates)> 0 ){ #parbauda vai ir specialitates datubazeeeeeeeeeeeeee
     while($ieraksts = mysqli_fetch_assoc($atlasaAktualitates)){
         echo "<div class='vakances'>
-                <div class='vak'><a href='vakance.php' value='$ieraksts['vakances_id'] method='post''>
+
+                <form action='aktualitate.php' method='post'>
+                <button type='submit' name='aktualitate' class='btn' value='{$ieraksts['aktualitate_id']}'>
+                <div class='vak'>
+                <a>
                     <h3>'{$ieraksts['virsraksts']}'</h3>
                     <hr>
                 <p>'{$ieraksts['apraksts']}'</p>
-                </a></div>
+                </a></form>
+                </div>
         </div>";
 
 }
