@@ -2,32 +2,6 @@
     require "header.php";
 ?>
 
-<?php
-					if(isset($_POST["login"])){
-                        require("connect_db.php");
-
-                        session_start();
-                        $lietotajvards = mysqli_real_escape_string($savienojums, $_POST['username']);
-                        $Parole = mysqli_real_escape_string($savienojums, $_POST['password']);
-
-                        $sqlVaicajums = "SELECT * FROM lietotaji WHERE lietotajvards = '$lietotajvards'";
-                        $rezultats = mysqli_query($savienojums, $sqlVaicajums);
-
-
-                    if(mysqli_num_rows($rezultats) == 1){
-                        while($row = mysqli_fetch_array($rezultats)){
-                            if(password_verify($Parole, $row["Parole"])){
-                                $_SESSION["lietotajvards"] = $email;
-                                header("location:index.php");
-                            }else{
-                                echo "<br>Nepareizs lietotājvārds vai parole!";
-                            }
-                        }
-                    }else{
-                        echo "Nepareizs lietotājvārds un/vai parole!";
-                    }
-                }
-				?>
                 
 
 <div class="home">

@@ -16,6 +16,10 @@ function openForm() {
 
   }
 
+  function hideLogin(){
+    document.getElementById("login-btn").style.display = "none";
+  }
+
 
   function enableOverflow(){
     document.querySelector(".overflow-hidden").style.overflow = "visible";

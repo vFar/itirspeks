@@ -32,16 +32,42 @@
         </form>
       </div>
 
+      <a class="logout"><i class="fas fa-sign-out"></i></a>
+
       <?php
-                    /*
-                    session_start();
-                    if(isset($_SESSION['lietotajvards'])){
-                        echo "<a href='logout.php'><b>{$_SESSION['lietotajvards']}</b>  <i class='fas fa-power-off'></i></a>";
+
+        if(isset($_POST["login"])){
+            require("connect_db.php");
+            session_start();
+
+            $Lietotajvards = mysqli_real_escape_string($savienojums, $_POST["username"]);
+            $Parole = mysqli_real_escape_string($savienojums, $_POST["password"]);
+
+            $lietotaja_atrasana_SQL = "SELECT * FROM lietotaji WHERE lietotajvards = '$Lietotajvards'";
+            $atrasanas_rezultats = mysqli_query($savienojums, $lietotaja_atrasana_SQL);
+
+            if(mysqli_num_rows($atrasanas_rezultats) == 1){
+                while($ieraksts = mysqli_fetch_assoc($atrasanas_rezultats)){
+                    if(password_verify($Parole, $ieraksts["parole"])){
+                        $_SESSION["lietotajvards"] = $ieraksts["lietotajvards"];
+                        echo "<style>#login-btn {display: none}</style>";
+                        #header("Refresh: 3");
                     }else{
-                        header("Refresh:1; url=login.php");
+                        echo "Nepareizs lietotājvārds un/vai parole!";
                     }
-                    */
-                ?>
+                }
+                
+            }else{
+                echo "Nepareizs lietotājvārds un/vai parole!";
+            }
+        }
+
+        /*
+        if(isset($GET['logout'])){
+            session_destroy();
+        }
+        */
+?>
 
 
       <div class="page-container">
