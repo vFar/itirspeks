@@ -473,6 +473,16 @@ hr{
     color: white;
     font-size: 20px;
 }
+
+.authDate #vakBTN{
+    margin-right: 70px;
+    margin-bottom: 0%;
+    margin-top: 15%;
+    }
+
+    .authDate #vakBTN:hover{
+        background: rgb(70, 109, 70);
+        }
 /*end*/
 
 .box .content{

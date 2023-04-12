@@ -53,6 +53,7 @@
     $akt_apraksts="";
     if(mysqli_num_rows($HomeatlasaAktualitates)==1 ){
     while($ieraksts = mysqli_fetch_assoc($HomeatlasaAktualitates)){
+        $aktID=$ieraksts['aktualitate_id'];
         $akt_virsraksts = $ieraksts['virsraksts'];
         $akt_apraksts = $ieraksts['apraksts'];
         }
@@ -63,7 +64,11 @@
     echo "<div class='box'>
 <h2>Jaunākā aktualitāte</h2>
 <hr>
-<a href='aktualitate.php'><h3 id='head3'>$akt_virsraksts</h3></a>
+<a><form action='aktualitate.php' method='post'>
+<button type='submit' name='latestAktualitate' class='btn' value=$aktID>
+<h3 id='head3'>$akt_virsraksts</h3>
+</button>
+</form></a>
 <p>$akt_apraksts</p>
     </div>";
 
@@ -71,10 +76,12 @@
 
     $HomevakanceQuery = "SELECT * from vakances order by vakance_id desc limit 1";
     $HomeatlasaVakances = mysqli_query($savienojums, $HomevakanceQuery);
+    $vakID="";
     $vak_virsraksts="";
     $vak_apraksts="";
     if(mysqli_num_rows($HomeatlasaVakances)==1 ){
     while($ieraksts = mysqli_fetch_assoc($HomeatlasaVakances)){
+        $vakID=$ieraksts['vakance_id'];
         $vak_virsraksts = $ieraksts['virsraksts'];
         $vak_apraksts = $ieraksts['apraksts'];
         }
@@ -84,7 +91,11 @@
     echo "<div class='box'>
         <h2>Jaunākā vakance</h2>
         <hr>
-        <a href='vakance.php'><h3 id='head3'>$vak_virsraksts</h3></a>
+        <form action='vakance.php' method='post'>
+<button type='submit' name='latestVakance' class='btn' value=$vakID>
+        <a><h3 id='head3'>$vak_virsraksts</h3></a>
+        </button>
+</form>
         <p>$vak_apraksts</p>
             </div>";
             ?>
