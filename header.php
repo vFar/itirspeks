@@ -20,6 +20,10 @@
     <a href="aktualitates.php">Aktualitātes</a>
     <a href="vakances.php">Vakances</a>
     <a href="kontakti.php">Kontakti</a>
+    <?php
+
+              
+    ?>
     <a id="login-btn" onclick="openForm()"><i class="fas fa-sign-in"></i></a>
     
     <div class="login-popup">
@@ -32,7 +36,7 @@
         </form>
       </div>
 
-      <a class="logout"><i class="fas fa-sign-out"></i></a>
+      <a href="logout.php" class="logout"><i class="fas fa-sign-out"></i></a>
 
       <?php
 
@@ -51,6 +55,8 @@
                     if(password_verify($Parole, $ieraksts["parole"])){
                         $_SESSION["lietotajvards"] = $ieraksts["lietotajvards"];
                         echo "<style>#login-btn {display: none}</style>";
+                        echo "<style>.logout {display: inline-block}</style>";
+                        
                         #header("Refresh: 3");
                     }else{
                         echo "Nepareizs lietotājvārds un/vai parole!";
@@ -62,11 +68,11 @@
             }
         }
 
-        /*
+        
         if(isset($GET['logout'])){
             session_destroy();
         }
-        */
+        
 ?>
 
 
