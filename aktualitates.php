@@ -48,10 +48,3 @@
 </div>
 
 <?php include "footer.php"; ?>
-
-
-<?php
-    if(isset($_SESSION['lietotajvards'])){
-        echo "<style>#login-btn {display: none}</style>";
-    }
-?>

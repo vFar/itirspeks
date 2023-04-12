@@ -8,3 +8,14 @@
 <script src="script.js"></script>
 </body>
 </html>
+
+<?php
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+
+    if(isset($_SESSION['lietotajvards'])){
+        echo "<style>#login-btn {display: none}</style>";
+        echo "<style>.logout {display: inline-block}</style>";
+    }
+?>

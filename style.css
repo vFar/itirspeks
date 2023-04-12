@@ -233,6 +233,7 @@ header .navbar a:hover{
 
   .logout{
     cursor: pointer;
+    display: none;
   }
 
 
