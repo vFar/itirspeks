@@ -413,49 +413,62 @@ header .navbar a:hover{
 }
 
 /* Dropdown Button */
-.dropbtn {
-    background-color: #3498DB;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Dropdown button on hover & focus */
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
-  }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
+.dropdown{
+    float: right;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn{
+    margin: 0;
+    font-family: inherit;
+    font-size: 1.5rem;
+    color: rgb(240, 240, 240);
+    background: rgba(0,0,0,0.0001);
+    margin-right: 80px;
     position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+
+
+
+.dropdown-content{
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+    background-color: rgba(75, 117, 75, 0.7);
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a::after{
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: 5px;
+    transition: 0.3s;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+    transition: 0.4s;
+}
+
+.dropdown .dropdown-content a {
+    float: none;
+    color: white;
+    padding: 30px 20px;
     text-decoration: none;
     display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-  .show {display:block;}
+    text-align: left;
+}
 
 #pieteiksanas .row form textarea{
     height: 20rem;
@@ -646,6 +659,26 @@ hr{
 
 }
 
+.pietVakances{
+    margin: 0 auto 0 auto;
+    color: white;
+    text-align: center;
+    
+}
+
+.pietVakances th{
+    font-size: 24px;
+    padding: 10px 20px 10px 0;
+    border-bottom: solid 3px white;
+}
+
+.pietVakances td{
+    font-size: 16px;
+    padding: 20px 15px;
+    border-bottom: solid 2px white;
+}
+
+
 .icons-container .icons i{
     height: 5.5rem;
     width: 5.5rem;
@@ -724,6 +757,19 @@ hr{
 
 .row form .btn:hover{
     background: rgb(70, 109, 70);
+}
+
+.row form .btn{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    padding:.8rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color:#fff;
+    background: rgb(94, 146, 94);
+    border-radius: 0.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
 }
 
 .btn{
