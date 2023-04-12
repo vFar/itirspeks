@@ -18,4 +18,6 @@
         echo "<style>#login-btn {display: none}</style>";
         echo "<style>.logout {display: inline-block}</style>";
     }
+
+
 ?>
