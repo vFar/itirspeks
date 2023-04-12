@@ -35,7 +35,7 @@
                 <input type="email" placeholder="E-pasts*" class="box">
                 <input type="number" placeholder="Tālrunis*" class="box">
                 <textarea name="" placeholder="Tavs ziņojums*" class="box" id="textarena" cols="30" rows="8"></textarea>
-                <input type="submit" value="Sazināties!" class="btn">
+                <input type="submit" value="Sazināties" class="btn">
             </form>
         </div>
     </div>

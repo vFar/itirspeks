@@ -11,9 +11,74 @@
     text-decoration: none;
 }
 
+
+.correct1{
+    color:white;
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding: 20px 50px;
+    background-color: rgb(107, 218, 107);
+    border-radius: 35px 35px 0 0;
+}
+
+
+.incorrect1{
+    color:white;
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding: 20px 50px;
+    background-color: rgb(188, 34, 34);
+    border-radius: 35px 35px 0 0;
+}
+
+.modContainer{
+    display: flex;
+    justify-content: center;
+    padding: 60px 0 90px 0px;
+}
+
+.btn1{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.8rem 3rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color:#fff;
+    background: rgb(72, 111, 72);
+    border-radius: 0.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+table{
+    font-size: 1.5rem;
+	width: 100%;
+}
+
+.text1{
+    padding: 0 5rem;
+}
+
+th, td{
+	text-align: center;
+	height: 100px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover{
+	background-color: rgb(98, 154, 98);
+    border-radius: 35px 35px 0 0;
+}
+
+th{
+	font-weight: bold;
+	color: white;
+	text-align:center;
+}
+
 .overflow-hidden{
     overflow: hidden;
 }
+
 .page-container{
     display: flex;
     flex-direction: column;
@@ -114,17 +179,14 @@ header .navbar{
         padding: 0 10px;
         text-transform: uppercase;
         cursor: pointer;
-
     }
-
-
 
     .dropdown-content{
         display: none;
         position: absolute;
         z-index: 1;
         background-color: rgba(75, 117, 75, 0.7);
-        min-width: 100px;
+        min-width: 95px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     }
 
@@ -135,22 +197,22 @@ header .navbar{
         height: 3px;
         width: 0;
         left: 0;
-        bottom: 5px;
+        bottom: 100px;
         transition: 0.3s;
     }
 
     .dropdown:hover .dropdown-content{
         display: block;
-        transition: 0.4s;
     }
 
     .dropdown .dropdown-content a {
         float: none;
         color: white;
-        padding: 30px 20px;
+        padding: 20px 5px;
+        margin: 10px 0;
         text-decoration: none;
         display: block;
-        text-align: left;
+        text-align: center;
     }
   
 

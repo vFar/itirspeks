@@ -1,6 +1,6 @@
 
 <?php
-session_start(); // Start the session
+session_start(); 
 
 require("connect_db.php");
 
@@ -16,7 +16,7 @@ if (isset($_POST["login"])) {
 
         if (password_verify($password, $record["parole"])) {
             $_SESSION["lietotajvards"] = $record["lietotajvards"];
-            header("Location: index.php"); // Redirect the user to the homepage
+            header("Location: index.php"); 
             exit();
         } else {
             $error = "Nepareizs lietotājvārds un/vai parole!";
@@ -25,26 +25,10 @@ if (isset($_POST["login"])) {
         $error = "Nepareizs lietotājvārds un/vai parole!";
     }
 }
-/*
-if(isset($_SESSION['lietotajvards'])){
-    echo "<div class='dropdown'>
-        <a href='#' class='dropbtn'>{$_SESSION['lietotajvards']}</a>
-        <div class='dropdown-content'>
-        <a href='pieteikumi.php'>Pieteikumi</a>
-        <a href='parolumaina.php'>Paroļu maiņa</a>
-        <a href='tiesibas.php'>Tiesības</a>
-        </div>
-    </div>
-        ";
-        
-}else{
-    echo"izslegts";
-}
-*/
 
 if (isset($_GET["logout"])) {
     session_destroy();
-    header("Location: index.php"); // Redirect the user to the homepage
+    header("Location: index.php"); 
     exit();
 }
 ?>
