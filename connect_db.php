@@ -1,5 +1,5 @@
 <?php 
-    $servera_vards = "localhost:3306";
+    $servera_vards = "localhost:3307";
     $lietotajvards = "root";
     $parole = "";
     $datubaze = "itirspeks";
