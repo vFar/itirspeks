@@ -10,42 +10,42 @@
 
 <div class="box-container">
 <div class="box">
-<table class="adminTabula">
+<table>
         <form method="post">
             <tr>
                 <td class="text1">Lietotājvārds:</td>
                 <td>
-                    <input name="newusername" type="text" placeholder="Ievadi lietotājvārdu*">
+                    <input class="box2" name="newusername" type="text" placeholder="Ievadi lietotājvārdu*">
                 </td>
             </tr>
             <tr>
                 <td class="text1">Parole:</td>
                 <td>
-                    <input name="newpassword" type="password" placeholder="Ievadi paroli*">
+                    <input class="box2" name="newpassword" type="password" placeholder="Ievadi paroli*">
                 </td>
             </tr>
             <tr>
                 <td class="text1">Vārds:</td>
                 <td>
-                    <input name="newname" type="text" placeholder="Ievadi vārdu*">
+                    <input class="box2" name="newname" type="text" placeholder="Ievadi vārdu*">
                 </td>
             </tr>
             <tr>
                 <td class="text1">Uzvārds:</td>
                 <td>
-                    <input name="newsurname" type="text" placeholder="Ievadi uzvārdu*">
+                    <input class="box2" name="newsurname" type="text" placeholder="Ievadi uzvārdu*">
                 </td>
             </tr>
             <tr>
                 <td class="text1">Tālruņa numurs:</td>
                 <td>
-                    <input name="newnumber" type="number" placeholder="Ievadi tālruņa numuru*">
+                    <input class="box2" name="newnumber" type="number" placeholder="Ievadi tālruņa numuru*">
                 </td>
             </tr>
             <tr>
                 <td class="text1">E-pasts:</td>
                 <td>
-                    <input name="newemail" type="text" placeholder="Ievadi e-pastu*">
+                    <input class="box2" name="newemail" type="text" placeholder="Ievadi e-pastu*">
                 </td>
             </tr>
             <tr>

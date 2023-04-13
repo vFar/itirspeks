@@ -1,28 +1,67 @@
 <?php
     require "header.php";
 ?>
-
-                
-
 <div class="home">
     <h1><span class="auto-type"></span></h1>
     <hr>
 </div>
-
 <div class="box-container">
-    <div class="box">
-<h2>Jaunākā aktualitāte</h2>
-<hr>
-<a href="aktualitate.html"><h3 id="head3">Kas jauns MySQL</h3></a>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus nam distinctio autem molestiae fugiat ratione consequatur facere laborum rerum quo obcaecati eveniet maxime architecto voluptate iusto odit amet, dignissimos exercitationem quam error nesciunt dolorem expedita non! Voluptas iure suscipit rem earum eveniet consequatur doloremque minus repellendus laboriosam, quia ratione quos!</p>
-    </div>
+    <?php
+    require("connect_db.php");
+    
+    $HomeaktualitateQuery = "SELECT * from aktualitates order by aktualitate_id desc limit 1";
+    $HomeatlasaAktualitates = mysqli_query($savienojums, $HomeaktualitateQuery);
+    $akt_virsraksts="";
+    $akt_apraksts="";
+    if(mysqli_num_rows($HomeatlasaAktualitates)==1 ){
+    while($ieraksts = mysqli_fetch_assoc($HomeatlasaAktualitates)){
+        $aktID=$ieraksts['aktualitate_id'];
+        $akt_virsraksts = $ieraksts['virsraksts'];
+        $akt_apraksts = $ieraksts['apraksts'];
+        }
+    }else{
+        echo "Izveidojusies kļūda";
+    }
 
-    <div class="box">
+        echo "<div class='box'>
+                <h2>Jaunākā aktualitāte</h2>
+                <hr>
+                <a><form action='aktualitate.php' method='post'>
+                <button type='submit' name='latestAktualitate' class='btn2' value=$aktID>
+                <h3 id='head3'>$akt_virsraksts</h3>
+                <p>$akt_apraksts</p>
+                </button>
+                </form></a>
+            </div>";
+
+
+
+    $HomevakanceQuery = "SELECT * from vakances order by vakance_id desc limit 1";
+    $HomeatlasaVakances = mysqli_query($savienojums, $HomevakanceQuery);
+    $vakID="";
+    $vak_virsraksts="";
+    $vak_apraksts="";
+    if(mysqli_num_rows($HomeatlasaVakances)==1 ){
+    while($ieraksts = mysqli_fetch_assoc($HomeatlasaVakances)){
+        $vakID=$ieraksts['vakance_id'];
+        $vak_virsraksts = $ieraksts['virsraksts'];
+        $vak_apraksts = $ieraksts['apraksts'];
+        }
+    }else{
+        echo "Izveidojusies kļūda";
+    }
+    echo "<div class='box'>
         <h2>Jaunākā vakance</h2>
         <hr>
-        <a href="vakance.html"><h3 id="head3">Darbs Liepājas Valsts tehnikumā</h3></a>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In quod voluptates suscipit laudantium harum maxime accusantium consectetur molestias maiores sint, quibusdam ex aliquid voluptatibus facilis eaque cumque nam nulla ut, illum excepturi ratione porro expedita. Nihil, eius exercitationem non suscipit labore illum aut hic excepturi veniam, nam tempore esse minus.</p>
-            </div>
+        <form action='vakance.php' method='post'>
+<button type='submit' name='latestVakance' class='btn2' value=$vakID>
+        <a><h3 id='head3'>$vak_virsraksts</h3></a>
+         <p>$vak_apraksts</p>
+        </button>
+        
+ </form>
+            </div>";
+            ?>
+            
 </div>
-
 <?php include "footer.php"; ?>

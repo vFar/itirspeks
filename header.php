@@ -1,38 +1,35 @@
-
 <?php
-session_start(); 
+session_start(); // Start the session
 
 require("connect_db.php");
 
 if (isset($_POST["login"])) {
     $username = mysqli_real_escape_string($savienojums, $_POST["username"]);
     $password = mysqli_real_escape_string($savienojums, $_POST["password"]);
-
     $sql = "SELECT * FROM lietotaji WHERE lietotajvards = '$username'";
     $result = mysqli_query($savienojums, $sql);
 
     if (mysqli_num_rows($result) == 1) {
         $record = mysqli_fetch_assoc($result);
-
         if (password_verify($password, $record["parole"])) {
             $_SESSION["lietotajvards"] = $record["lietotajvards"];
-            header("Location: index.php"); 
+        $_SESSION["role"] = $record["id_tiesibas"];
+            header("Location: index.php"); // Redirect the user to the homepage
             exit();
         } else {
-            $error = "Nepareizs lietotājvārds un/vai parole!";
+            $error = "<div class='logError'>Nepareizs lietotājvārds un/vai parole!</div>";
         }
     } else {
-        $error = "Nepareizs lietotājvārds un/vai parole!";
+        $error = "<div class='logError'>Nepareizs lietotājvārds un/vai parole!</div>";
     }
 }
-
 if (isset($_GET["logout"])) {
     session_destroy();
-    header("Location: index.php"); 
+    header("Location: index.php"); // Redirect the user to the homepage
     exit();
 }
 ?>
-
+    
 <!DOCTYPE html>
 <html lang="lv">
 <head>
@@ -68,25 +65,41 @@ if (isset($_GET["logout"])) {
                         <input type="password" placeholder="Parole" name="password" required>
                         <button type="submit" name="login">Autorizēties</button>
                     </form>
+                    
                     <?php if (isset($error)) { ?>
-                        <p class="error"><?php echo $error; ?></p>
+                        <p class="error">
+                            <?php echo $error; 
+                            $error=NULL;?></p>
                     <?php } ?>
                 </div>
-
                 <?php
                     if(isset($_SESSION['lietotajvards'])){
-                        echo "<div class='dropdown'>
-                            <a href='#' class='dropbtn'>{$_SESSION['lietotajvards']}</a>
-                            <div class='dropdown-content'>
-                            <a href='pieteikumi.php'>Pieteikumi</a>
-                            <a href='parolumaina.php'>Paroļu maiņa</a>
-                            <a href='tiesibas.php'>Tiesības</a>
+                        if($_SESSION['role'] == 1){
+                            echo "<div class='dropdown'>
+                                <a href='#' class='dropbtn'>{$_SESSION['lietotajvards']}</a>
+                                <div class='dropdown-content'>
+                                <a href='pieteikumi.php'>Pieteikumi</a>
+                                <a href='parolumaina.php'>Paroļu maiņa</a>
+                                <a href='tiesibas.php'>Tiesības</a>
+                                </div>
                             </div>
-                        </div>
-                            ";
+                                ";
+                        }elseif($_SESSION['role'] == 2){
+                            echo "<div class='dropdown'>
+                                <a href='#' class='dropbtn'>{$_SESSION['lietotajvards']}</a>
+                                <div class='dropdown-content'>
+                                <a href='pieteikumi.php'>Pieteikumi</a>
+                                <a href='parolumaina.php'>Paroļu maiņa</a>
+                                </div>
+                            </div>
+                                ";
+                        }else{
+                            echo "error";
+                        }
                     }
                 ?>
 
                 <div id="menu-btn" class="fas fa-bars"></div>
             </nav>
         </header>
+           

@@ -44,6 +44,7 @@
     
                         if (mysqli_query($savienojums, $updatePassword)) {
                             echo "<div class='correct1' style='border-radius: 0 0 35px 35px'>Parole veiksmīgi nomainīta</div>";
+                            header("Refresh:2, url=index.php");
                         } else {
                             echo "<div class='incorrect1' style='border-radius: 0 0 35px 35px'>Radusies kļūda - sazinieties ar sistēmas administratoru!</div>";
                         }

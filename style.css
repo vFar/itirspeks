@@ -31,6 +31,13 @@
     border-radius: 35px 35px 0 0;
 }
 
+.logError{
+    color:red;
+    font-weight: 500;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
 .modContainer{
     display: flex;
     justify-content: center;
@@ -49,6 +56,85 @@
     box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
 }
 
+.btn2{
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    display: inline-block;
+    padding:.8rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color:#fff;
+    background: rgb(94, 146, 94);
+    border-radius: 0.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+.vakances{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.9rem;
+    margin: 3rem 0;
+    margin-right: 5rem;
+    margin-left: 5rem;
+
+}
+
+.vakances .vak{
+    padding: 1rem;
+    text-align: center;
+    border: 0.1rem solid rgba(0,0,0,.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    background: rgb(94, 146, 94);
+    height: 100%;
+}
+
+.vakances h3{
+    color: white;
+    font-size: 24px;
+    left:0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    position: relative;
+    width: 80%;
+    text-align: center;
+}
+
+.vakances hr{
+    position: relative;
+    margin: 1% auto 15px auto;
+    background-color: white;
+    width: 90%;
+    height: 3px;
+}
+
+.vakances p{
+    position: relative;
+    color: #eee;
+    width: 90%;
+    text-align: center;
+    font-size: 16px;
+}
+.vakances button{
+    padding: 1rem;
+    text-align: center;
+    border: 0.1rem solid rgba(0,0,0,.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    background: rgb(94, 146, 94);
+    height: 100%;
+}
+
+.vakances .vak:hover{
+    transition: 0.5s;
+    transform: translateY(-20px);
+    background: rgb(67, 104, 67);
+}
+
+
+
 table{
     font-size: 1.5rem;
 	width: 100%;
@@ -62,11 +148,29 @@ th, td{
 	text-align: center;
 	height: 100px;
     border-bottom: 1px solid #ddd;
+    word-wrap: break-word;
+
 }
 
 tr:hover{
 	background-color: rgb(98, 154, 98);
     border-radius: 35px 35px 0 0;
+}
+
+.truncate {
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .box p{
+    position: relative;
+    margin: 2% auto 20px auto;
+    max-width: 90%;
+    text-align: center;
+    font-size: 22px;
+    color: white;
 }
 
 th{
@@ -505,7 +609,79 @@ hr{
     text-align: center;
     border-radius: 35px;
     margin: 30px auto;
-    color: wheat;
+    color: white;
+}
+
+.box1{
+    background-color: rgb(223, 223, 223);
+    height: 80px;
+    width: 70%;
+    text-align: center;
+    border-radius: 15px;
+    margin: 30px auto;
+    color: rgb(76, 119, 76);
+    font-size: 1.5rem;
+}
+
+.box2{
+    background-color: rgb(223, 223, 223);
+    height: 80px;
+    width: 70%;
+    text-align: center;
+    border-radius: 15px;
+    margin: 30px auto;
+    color: rgb(76, 119, 76);
+    font-size: 1.5rem;
+}
+
+#pieteiksanas{
+    padding:2rem 15%;
+}
+
+#pieteiksanas .row{
+    flex:1 1 41rem;
+    padding: 1rem;
+    border: 0.1rem solid rgba(0,0,0,.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    background: rgb(94, 146, 94);
+}
+
+#pieteiksanas .row form{
+    flex:1 1 45rem;
+    padding:2rem;
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--radius);
+}
+
+#pieteiksanas .row form .box1{
+    margin:.7rem 0;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: black;
+    border: 0.1rem solid rgba(0,0,0,.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    background: #f7f7f7;
+    text-transform: none;
+    width: 49.8%;
+}
+
+
+
+#pieteiksanas .row form .box2{
+    margin:.7rem 0;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: black;
+    border: 0.1rem solid rgba(0,0,0,.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    background: #f7f7f7;
+    text-transform: none;
+    width: 100%;
+    height: 7rem;
 }
 
 .box h2{
@@ -520,6 +696,35 @@ hr{
     max-width: 80%;
     text-align: center;
     font-size: 3rem;
+}
+
+.pietVakances{
+    margin: 0 auto 0 auto;
+    color: white;
+    text-align: center;
+
+}
+
+.pietVakances th{
+    font-size: 24px;
+    padding: 10px 20px 10px 0;
+    border-bottom: solid 3px white;
+}
+
+.pietVakances td{
+    font-size: 16px;
+    padding: 20px 15px;
+    border-bottom: solid 2px white;
+}
+
+.authDate #vakBTN{
+    margin-right: 70px;
+    margin-bottom: 0%;
+    margin-top: 15%;
+}
+
+.authDate #vakBTN:hover{
+    background: rgb(70, 109, 70);
 }
 
 .box h3{
