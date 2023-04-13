@@ -19,7 +19,7 @@ while($ieraksts = mysqli_fetch_assoc($vakSavienojums)){
 
 
    echo  "<div class='box'>
-<h2>{$ieraksts['virsraksts']}</h2>
+<h2 id='ind'>{$ieraksts['virsraksts']}</h2>
 <hr>
 <p class='cont'>{$ieraksts['apraksts']}</p>
 <div class='authDate'>
@@ -31,5 +31,6 @@ while($ieraksts = mysqli_fetch_assoc($vakSavienojums)){
     echo "Kļūūda";
 }
     ?>
+</div>
 </div>
 <?php include "footer.php"; ?>

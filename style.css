@@ -96,6 +96,13 @@ header .navbar{
     font-weight: 600;
 }
 
+.logError{
+    color:red;
+    font-weight: 500;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
 
 header .navbar a{
     font-size: 1.5rem;
@@ -746,6 +753,21 @@ hr{
     text-align: left;
 }
 
+#ind{
+        color: white;
+        left:0;
+        right:0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        font-size: 3rem;
+
+}
+
 .row form .box:focus{
     background:#e9f3fc;
 }
@@ -774,6 +796,19 @@ hr{
 
 .btn{
     margin-top: 1rem;
+    display: inline-block;
+    padding:.8rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color:#fff;
+    background: rgb(94, 146, 94);
+    border-radius: 0.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+.btn2{
+    margin-top: 1rem;
+    margin-bottom: 5rem;
     display: inline-block;
     padding:.8rem 3rem;
     font-size: 1.7rem;

@@ -48,6 +48,8 @@ require ("connect_db.php");
 
 <div class="box-container">
      <div class="box">
+        <h2>Piesakies vakancei</h2>
+        <hr>
 <div id="pieteiksanas">
    
 <div class="row">

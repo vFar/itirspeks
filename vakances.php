@@ -16,11 +16,11 @@ if(mysqli_num_rows($atlasaVakances)> 0 ){ #parbauda vai ir specialitates datubaz
         <div class='vakances'>
                 <div class='vak'>
                 <form action='vakance.php' method='post'>
-                <button type='submit' name='vakance' value='{$ieraksts['vakance_id']}'>
+                <button type='submit' name='vakance' value={$ieraksts['vakance_id']}>
                 <a>
-                    <h3>'{$ieraksts['virsraksts']}'</h3>
+                    <h3>{$ieraksts['virsraksts']}</h3>
                     <hr>
-                <p>'{$ieraksts['apraksts']}'</p>
+                <p>{$ieraksts['apraksts']}</p>
                 </a>
                 </button>
                 </form>

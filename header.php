@@ -17,10 +17,10 @@ if (isset($_POST["login"])) {
             header("Location: index.php"); // Redirect the user to the homepage
             exit();
         } else {
-            $error = "Nepareizs lietotājvārds un/vai parole!";
+            $error = "<div class='logError'>Nepareizs lietotājvārds un/vai parole!</div>";
         }
     } else {
-        $error = "Nepareizs lietotājvārds un/vai parole!";
+        $error = "<div class='logError'>Nepareizs lietotājvārds un/vai parole!</div>";
     }
 }
 if (isset($_GET["logout"])) {
@@ -29,7 +29,7 @@ if (isset($_GET["logout"])) {
     exit();
 }
 ?>
-
+    
 <!DOCTYPE html>
 <html lang="lv">
 <head>
@@ -67,7 +67,9 @@ if (isset($_GET["logout"])) {
                     </form>
                     
                     <?php if (isset($error)) { ?>
-                        <p class="error"><?php echo $error; ?></p>
+                        <p class="error">
+                            <?php echo $error; 
+                            $error=NULL;?></p>
                     <?php } ?>
                 </div>
                 <?php

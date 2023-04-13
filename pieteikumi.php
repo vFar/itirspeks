@@ -4,6 +4,8 @@
  
 <div class = "box-container">
 <div class="box">
+    <h2>Pieteikumi</h2>
+    <hr>
 <div class="row">
 <form action="aktualitatesCRUD.php" method="post">
     <button type=submit name="aktCRUD" class="btn">Aktualitātes CRUD</button>

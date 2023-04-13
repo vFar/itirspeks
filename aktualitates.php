@@ -16,11 +16,11 @@ if(mysqli_num_rows($atlasaAktualitates)> 0 ){ #parbauda vai ir specialitates dat
                 <div class='vakances'>
                 <div class='vak'>
                 <form action='aktualitate.php' method='post'>
-                <button type='submit' name='aktualitate' class='btn' value='{$ieraksts['aktualitate_id']}'>
+                <button type='submit' name='aktualitate' class='btn' value={$ieraksts['aktualitate_id']}>
                  <a>
-                    <h3>'{$ieraksts['virsraksts']}'</h3>
+                    <h3>{$ieraksts['virsraksts']}</h3>
                     <hr>
-                <p>'{$ieraksts['apraksts']}'</p>
+                <p>{$ieraksts['apraksts']}</p>
                 </a>
                 </button>
                 </form>

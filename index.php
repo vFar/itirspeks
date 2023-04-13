@@ -27,11 +27,12 @@
 <h2>Jaunākā aktualitāte</h2>
 <hr>
 <a><form action='aktualitate.php' method='post'>
-<button type='submit' name='latestAktualitate' class='btn' value=$aktID>
+<button type='submit' name='latestAktualitate' class='btn2' value=$aktID>
 <h3 id='head3'>$akt_virsraksts</h3>
+<p>$akt_apraksts</p>
 </button>
 </form></a>
-<p>$akt_apraksts</p>
+
     </div>";
 
 
@@ -54,11 +55,12 @@
         <h2>Jaunākā vakance</h2>
         <hr>
         <form action='vakance.php' method='post'>
-<button type='submit' name='latestVakance' class='btn' value=$vakID>
+<button type='submit' name='latestVakance' class='btn2' value=$vakID>
         <a><h3 id='head3'>$vak_virsraksts</h3></a>
+         <p>$vak_apraksts</p>
         </button>
-</form>
-        <p>$vak_apraksts</p>
+        
+ </form>
             </div>";
             ?>
             
